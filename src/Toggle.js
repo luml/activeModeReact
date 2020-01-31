@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import { ReactComponent as MoonIcon } from './icons/moon.svg';
 import { ReactComponent as SunIcon } from './icons/sun.svg';
 
-const Toggle = ({theme, toggleTheme}) => {
+const Toggle = ({ theme, toggleTheme }) => {
     const isLight = theme === 'light';
     return (
-        <ToggleContainer onClick={toggleTheme}>
+        <ToggleContainer lightTheme={isLight} onClick={toggleTheme}>
             <SunIcon />
             <MoonIcon />
         </ToggleContainer>
