@@ -20,8 +20,22 @@ export const GlobalStyles = createGlobalStyle`
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }
+  div#root {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
   h1 {
     display: flex;
     justify-content: center;
   }
+  footer {
+    margin-top: 3rem;
+  }
+
+  div.activeMode {
+    background-image : url("${({ theme }) => theme.image})");
+  }
+
   `

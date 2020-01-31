@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
 import { GlobalStyles } from './global';
 import Toggle from './Toggle';
+import Content from './content';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -19,6 +20,7 @@ function App() {
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
         <h1>It's a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
+        <Content />
         <footer>
           <span>Credits:</span>
           <small><b>Sun</b> icon made by <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com">www.flaticon.com</a></small>
