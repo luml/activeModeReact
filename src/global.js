@@ -14,14 +14,15 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
     padding: 0;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
   }
   div#root {
-    height: auto;
+    height: 750px;
+    overflow: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
