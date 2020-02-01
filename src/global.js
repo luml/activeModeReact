@@ -21,7 +21,7 @@ export const GlobalStyles = createGlobalStyle`
     transition: all 0.25s linear;
   }
   div#root {
-    height: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -31,11 +31,25 @@ export const GlobalStyles = createGlobalStyle`
     justify-content: center;
   }
   footer {
-    margin-top: 3rem;
+    justify-content: center;
+    display: flex;
+    margin-top: -24rem;
   }
-
-  div.activeMode {
-    background-image : url("${({ theme }) => theme.image})");
+  img{
+    margin-top: -30rem;
+    transform: scale(0.3) rotateY(0);
+    animation: two 3s infinite;
   }
-
+  @keyframes two {
+  0% {
+    transform: scale(0.3) rotateY(0);
+  }
+  50% {
+    transform: scale(0.3) rotateY(-180deg);
+  }
+  100% {
+    transform: scale(0.3) rotateY(-0);
+  }
+}
+}
   `

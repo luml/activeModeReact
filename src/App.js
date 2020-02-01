@@ -1,3 +1,5 @@
+// https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/
+
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
@@ -20,7 +22,7 @@ function App() {
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
         <h1>It's a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
-        <Content />
+        <Content theme={theme}/>
         <footer>
           <span>Credits:</span>
           <small><b>Sun</b> icon made by <a href="https://www.flaticon.com/authors/smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com">www.flaticon.com</a></small>
