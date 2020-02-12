@@ -1,23 +1,23 @@
 // https://css-tricks.com/a-dark-mode-toggle-with-react-and-themeprovider/
 
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
 import { GlobalStyles } from './global';
 import Toggle from './Toggle';
 import Content from './content';
+import {useDarkMode} from './useDarkMode'
 
 function App() {
-  const [theme, setTheme] = useState('light');
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  if(!componentMounted) {
+    return <div />
   }
+
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
