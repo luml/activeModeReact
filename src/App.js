@@ -11,6 +11,7 @@ import {useDarkMode} from './useDarkMode'
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const themeCopy = theme.toUpperCase();
 
   if(!componentMounted) {
     return <div />
@@ -21,7 +22,7 @@ function App() {
       <>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <h1>It's a {theme === 'light' ? 'light theme' : 'dark theme'}!</h1>
+        <h1>It's a {themeCopy === 'LIGHT' ? 'LIGHT theme' : 'DARK theme'}!</h1>
         <Content theme={theme}/>
         <footer>
           <span>Credits:</span>
@@ -32,5 +33,6 @@ function App() {
     </ThemeProvider>
   );
 }
+
 
 export default App;
