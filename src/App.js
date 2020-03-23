@@ -22,7 +22,7 @@ function App() {
       <>
         <GlobalStyles />
         <Toggle theme={theme} toggleTheme={toggleTheme} />
-        <h1>It's a {themeCopy === 'LIGHT' ? 'LIGHT theme' : 'DARK theme'}!</h1>
+        <h1>Here {themeCopy === 'LIGHT' ? 'LIGHT theme' : 'DARK theme'}!</h1>
         <Content theme={theme}/>
         <footer>
           <span>Credits:</span>
